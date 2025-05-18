@@ -7,9 +7,9 @@ name = "pypi"
 langchain = "*"
 langchain-openai = "*"
 langchainhub = "*"
-langchain-community = "*"
 python-dotenv = "*"
 langchain-ollama = "*"
+langchain-community = "*"
 
 [dev-packages]
 

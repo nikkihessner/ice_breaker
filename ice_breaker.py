@@ -25,9 +25,7 @@ if __name__ == "__main__":
     print("Hello LangChain")
 
     summary_template = """
-    Given the following information about a person:
-
-    {information}
+    given the LinkedIn information {information} about a person I want you to create:
 
     Please:
     1. Write a short summary.
@@ -37,7 +35,7 @@ if __name__ == "__main__":
     
     summary_prompt_template = PromptTemplate(input_variables="information", template=summary_template)
 
-    # llm = ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo")
+    # llm = ChatOpenAI(temperature=0, model_name="gpt-4o-mini")
     llm = ChatOllama(model="llama3")
 
     chain = summary_prompt_template | llm | StrOutputParser()
